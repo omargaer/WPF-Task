@@ -1,0 +1,146 @@
+﻿<Window x:Class="WPF_Task.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Task"
+        mc:Ignorable="d"
+        Title="Kanban Board" Height="450" Width="800"
+        Foreground="White" Background="#2E2E2E">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#3C3C3C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#5A5A5A"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="pack://application:,,,/Fonts/#Nunito"/>            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Background" Value="#3C3C3C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="pack://application:,,,/Fonts/#Nunito"/>   
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="#5A5A5A" 
+                                BorderThickness="1"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#5A5A5A"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="FontFamily" Value="pack://application:,,,/Fonts/#Nunito"/>   
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10">
+                            <ScrollViewer Margin="0" Focusable="false">
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            
+            <Border BorderBrush="#5A5A5A" BorderThickness="1" CornerRadius="5" Margin="0,0,0,10">
+                <TextBlock Text="Не готово" FontWeight="Bold" FontSize="16"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+            </Border>
+            <ListBox Name="ToDoListBox" Background="#3C3C3C" Foreground="White" MinHeight="30"
+                     ContextMenuOpening="ListBox_ContextMenuOpening"
+                     MouseDoubleClick="ListBox_MouseDoubleClick"
+                     AllowDrop="True"
+                     PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" 
+                     Drop="ListBox_Drop" 
+                     DragOver="ListBox_DragOver">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Move to In Progress" Click="MoveToInProgress_Click"/>
+                        <MenuItem Header="Move to Done" Click="MoveToDone_Click"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+            <Button Content="Add Task" Click="AddTask_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <Border BorderBrush="#5A5A5A" BorderThickness="1" CornerRadius="5" Margin="0,0,0,10">
+                <TextBlock Text="В процессе" FontWeight="Bold" FontSize="16"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+            </Border>
+            <ListBox Name="InProgressListBox" Background="#3C3C3C" Foreground="White" MinHeight="30"
+                     ContextMenuOpening="ListBox_ContextMenuOpening"
+                     MouseDoubleClick="ListBox_MouseDoubleClick"
+                     AllowDrop="True"
+                     PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" 
+                     Drop="ListBox_Drop" 
+                     DragOver="ListBox_DragOver">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Move to To Do" Click="MoveToToDo_Click"/>
+                        <MenuItem Header="Move to Done" Click="MoveToDone_Click"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Margin="10">
+            <Border BorderBrush="#5A5A5A" BorderThickness="1" CornerRadius="5" Margin="0,0,0,10">
+                <TextBlock Text="Готово" FontWeight="Bold" FontSize="16"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+            </Border>
+            <ListBox Name="DoneListBox" Background="#3C3C3C" Foreground="White" MinHeight="30"
+                     ContextMenuOpening="ListBox_ContextMenuOpening"
+                     AllowDrop="True"
+                     MouseDoubleClick="ListBox_MouseDoubleClick"
+                     PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" 
+                     Drop="ListBox_Drop" 
+                     DragOver="ListBox_DragOver">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Move to To Do" Click="MoveToToDo_Click"/>
+                        <MenuItem Header="Move to In Progress" Click="MoveToInProgress_Click"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\bin\Debug\net8.0-windows\WPF Task.exe
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\bin\Debug\net8.0-windows\WPF Task.deps.json
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\bin\Debug\net8.0-windows\WPF Task.runtimeconfig.json
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\bin\Debug\net8.0-windows\WPF Task.dll
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\bin\Debug\net8.0-windows\WPF Task.pdb
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task_MarkupCompile.cache
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task_MarkupCompile.lref
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.g.resources
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.AssemblyInfoInputs.cache
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.AssemblyInfo.cs
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.csproj.CoreCompileInputs.cache
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.dll
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\refint\WPF Task.dll
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.pdb
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.genruntimeconfig.cache
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\ref\WPF Task.dll
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\EditTaskWindow.baml
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\EditTaskWindow.g.cs
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\AddTaskWindow.g.cs
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\AddTaskWindow.baml
