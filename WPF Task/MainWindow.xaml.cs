@@ -188,21 +188,7 @@ public partial class MainWindow : Window
     /// <param name="e"></param>
     private void AddTask_Click(object sender, RoutedEventArgs e)
     {
-        //сначала так
-        //ToDoListBox.Items.Add("New Task");
-        //потом вот так:
-        var addTaskWindow = new AddTaskWindow();
-        if (addTaskWindow.ShowDialog() == true)
-        {
-            string title = addTaskWindow.TaskTitle;
-            string description = addTaskWindow.TaskDescription;
-
-            if (!string.IsNullOrWhiteSpace(title))
-            {
-                var newTask = new TaskItem { Title = title, Description = description, Status = "To Do" };
-                ToDoListBox.Items.Add(newTask);
-            }
-        }
+        ToDoListBox.Items.Add("New Task");
     }
     
     /// <summary>

@@ -20,5 +20,4 @@ C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task
 C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\ref\WPF Task.dll
 C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\EditTaskWindow.baml
 C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\EditTaskWindow.g.cs
-C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\AddTaskWindow.g.cs
-C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\AddTaskWindow.baml
+C:\Users\omaro\RiderProjects\WPF Task\WPF Task\obj\Debug\net8.0-windows\WPF Task.sourcelink.json
